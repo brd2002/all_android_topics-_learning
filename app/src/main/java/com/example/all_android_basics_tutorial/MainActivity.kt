@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.Toast
 import com.example.all_android_basics_tutorial.databinding.ActivityMainBinding
@@ -27,9 +28,19 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this , "Hi , I am bharat Thank you for visiting ..." , Toast.LENGTH_LONG).show()
 //        }
 
-    val buttonId = findViewById<Button>(R.id.buttonOpenActivity)
-        buttonId.setOnClickListener {
-            Intent(this , MainActivity2::class.java).also {
+//    val buttonId = findViewById<Button>(R.id.buttonOpenActivity)
+//        buttonId.setOnClickListener {
+//            Intent(this , MainActivity2::class.java).also {
+//                startActivity(it)
+//            }
+//        }
+        val applyButtonId = findViewById<Button>(R.id.applyButton)
+        applyButtonId.setOnClickListener {
+            val name = findViewById<EditText>(R.id.nameId).text.toString()
+            val age = findViewById<EditText>(R.id.ageId).text.toString().toInt()
+            Intent(this, MainActivity2::class.java).also {
+                it.putExtra("EXTRA_NAME" , name)
+                it.putExtra("EXTRA_AGE" , age)
                 startActivity(it)
             }
         }

@@ -109,14 +109,45 @@
 <!--        app:layout_constraintHorizontal_bias="0.215"-->
 <!--        app:layout_constraintStart_toEndOf="@+id/khasi"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/tbquestion" />-->
-    <Button
-        android:id="@+id/buttonOpenActivity"
+<!--    <Button-->
+<!--        android:id="@+id/buttonOpenActivity"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="go to next page"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <EditText
+        android:id="@+id/nameId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="go to next page"
+        android:layout_marginTop="30dp"
+        android:hint="What is your name "
+        app:layout_constraintEnd_toEndOf="@+id/ageId"
+        app:layout_constraintStart_toStartOf="@+id/ageId"
+        app:layout_constraintTop_toBottomOf="@+id/ageId" />
+
+    <EditText
+        android:id="@+id/ageId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="What is your age "
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="apply"
+        app:layout_constraintEnd_toEndOf="@+id/nameId"
+        app:layout_constraintStart_toStartOf="@+id/nameId"
+        app:layout_constraintTop_toBottomOf="@+id/nameId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
